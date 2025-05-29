@@ -1,1 +1,1 @@
-# 1.-Actividad-Pr-ctica
+# 1.-Actividad-Practica
