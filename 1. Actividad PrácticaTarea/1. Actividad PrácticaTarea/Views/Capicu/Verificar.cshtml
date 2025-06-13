@@ -1,0 +1,20 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Verificar número Capicúa";
+}
+
+<h2>Verificar número Capicúa</h2>
+
+@using (Html.BeginForm("Verificar", "Capicu", FormMethod.Post))
+{
+    <label for="numero">Ingresa un número:</label>
+    <input type="number" name="numero" required />
+    <button type="submit">Verificar</button>
+}
+
+@if (ViewBag.Numero != null)
+{
+    <p>El número <strong>@ViewBag.Numero</strong> @ViewBag.Resultado</p>
+}
