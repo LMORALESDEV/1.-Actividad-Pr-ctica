@@ -1,0 +1,24 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Verificar contraseña";
+}
+
+<h2>Verificación de Contraseña</h2>
+
+<p>Contraseña ingresada: <strong>@ViewBag.Password</strong></p>
+
+@if ((bool)ViewBag.EsSegura)
+{
+    <p style="color: green;">✅ La contraseña es segura.</p>
+}
+else
+{
+    <p style="color: red;">❌ La contraseña no es segura.</p>
+    <ul>
+        <li>Debe tener al menos 8 caracteres</li>
+        <li>Debe incluir al menos una letra mayúscula</li>
+        <li>Debe incluir al menos un número</li>
+    </ul>
+}
